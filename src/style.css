@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  height: 100%;
+}
+
+body {
+  @apply font-body text-slate-700 bg-slate-50 antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: '"Plus Jakarta Sans"', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #C7D6F0;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #AFC9F2;
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-card border border-slate-100 transition-shadow duration-200;
+  }
+  .card:hover {
+    @apply shadow-card-hover;
+  }
+  .badge-sumber {
+    @apply inline-flex items-center gap-1 rounded-full bg-slate-100 text-slate-500 text-[11px] font-medium px-2 py-0.5 border border-slate-200;
+  }
+  .badge-internal {
+    @apply inline-flex items-center gap-1 rounded-full bg-brand-50 text-brand-700 text-[11px] font-medium px-2 py-0.5 border border-brand-100;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-700 text-white text-sm font-semibold px-4 py-2.5 shadow-sm hover:bg-brand-800 active:scale-[0.98] transition-all duration-150;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-white text-brand-700 text-sm font-semibold px-4 py-2.5 border border-brand-200 hover:bg-brand-50 active:scale-[0.98] transition-all duration-150;
+  }
+  .input-field {
+    @apply w-full rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-sm text-slate-700 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-200 focus:border-brand-400 transition;
+  }
+  .page-title {
+    @apply text-xl md:text-2xl font-display font-bold text-navy-900;
+  }
+  .section-label {
+    @apply text-[11px] font-semibold uppercase tracking-wider text-slate-400;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+  .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+}
