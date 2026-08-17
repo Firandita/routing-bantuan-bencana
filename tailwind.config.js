@@ -37,7 +37,7 @@ export default {
         'card-hover': '0 4px 12px rgba(11,23,48,0.08), 0 16px 32px -12px rgba(11,23,48,0.18)',
       },
       backgroundImage: {
-        'ribbon': 'linear-gradient(180deg, #0B1730 0%, #16255A 42%, #223A78 70%, #3B5FD9 88%, #FFFFFF 100%)',
+        'ribbon': 'linear-gradient(180deg, #0B1730 0%, #0F1E3D 22%, #16255A 40%, #223A78 58%, #3251A0 74%, #6B8FE0 88%, #FFFFFF 100%)',
         'sidebar-gradient': 'linear-gradient(180deg, #0F1E3D 0%, #0B1730 100%)',
         'page-glow': 'radial-gradient(circle at 15% 0%, #EAF1FC 0%, #F4F7FD 45%, #FFFFFF 100%)',
       },

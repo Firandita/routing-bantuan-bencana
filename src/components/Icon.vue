@@ -36,6 +36,8 @@ const paths = {
   sun: 'M12 4V2m0 20v-2M4 12H2m20 0h-2M5.6 5.6 4.2 4.2m15.6 15.6-1.4-1.4M5.6 18.4l-1.4 1.4M18.4 5.6l1.4-1.4M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z',
   building: 'M4 21V4a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v17M4 21h16M8 7h1m3 0h1m-5 4h1m3 0h1m-5 4h1m3 0h1M14 21v-4h4v4',
   layers: 'm12 2 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5',
+  waterDrop: 'M12 3c3.5 4 7 8.2 7 12a7 7 0 1 1-14 0c0-3.8 3.5-8 7-12Z',
+  landslide: 'M2 20 9 6l3.5 6.5L15 8l7 12H2Zm5-3 2.2-3.8M14.5 17l1.3-2.2',
 }
 
 const path = paths[props.name] || paths.home

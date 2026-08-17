@@ -13,7 +13,7 @@ const sidebarOpen = ref(false)
     <div class="flex-1 min-w-0 flex flex-col">
       <Topbar @toggle-sidebar="sidebarOpen = true" />
 
-      <main class="flex-1 px-4 sm:px-6 lg:px-8 py-6 -mt-3">
+      <main class="flex-1 px-4 sm:px-6 lg:px-8 py-6">
         <RouterView v-slot="{ Component }">
           <Transition name="fade" mode="out-in">
             <component :is="Component" />

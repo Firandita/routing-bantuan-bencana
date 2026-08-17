@@ -27,11 +27,8 @@ const jam = computed(() => now.value.toLocaleTimeString('id-ID', { hour: '2-digi
 </script>
 
 <template>
-  <header class="relative overflow-hidden bg-ribbon">
-    <!-- subtle texture -->
-    <div class="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_20%_20%,white,transparent_35%)]" />
-
-    <div class="relative px-4 sm:px-6 lg:px-8 pt-6 pb-10">
+  <header class="relative bg-navy-900">
+    <div class="relative px-4 sm:px-6 lg:px-8 pt-6 pb-7">
       <div class="flex items-start justify-between gap-4">
         <div class="flex items-center gap-3 min-w-0">
           <button

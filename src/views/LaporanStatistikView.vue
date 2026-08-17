@@ -2,8 +2,8 @@
 import { rekapWilayah, trenBencana } from '../data/dummyData'
 
 const trenSeries = [
-  { name: 'Longsor', color: '#EA580C', data: trenBencana.longsor },
-  { name: 'Banjir', color: '#0284C7', data: trenBencana.banjir },
+  { name: 'Longsor', color: '#EA580C', data: trenBencana.bulanan.longsor },
+  { name: 'Banjir', color: '#0284C7', data: trenBencana.bulanan.banjir },
 ]
 
 function pct(a, b) {
@@ -25,7 +25,7 @@ function pct(a, b) {
           <h3 class="font-display font-bold text-navy-900 text-sm">Tren Kejadian (Pembanding DIBI-BNPB)</h3>
           <span class="badge-sumber">Sumber: DIBI-BNPB</span>
         </div>
-        <LineChart :labels="trenBencana.bulan" :series="trenSeries" />
+        <LineChart :labels="trenBencana.bulanan.label" :series="trenSeries" />
       </div>
 
       <div class="card p-5 lg:col-span-3">

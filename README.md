@@ -39,7 +39,7 @@ src/
 ## Menyambungkan ke data/API asli
 
 1. **Data dummy → API**: ganti isi `src/data/dummyData.js` dengan pemanggilan `fetch`/`axios` ke backend (disarankan di dalam `onMounted` masing-masing view, atau dipindah ke Pinia store bila state makin kompleks).
-2. **Peta mock → Leaflet asli**: komponen `src/components/MapMock.vue` sudah menerima props `points` berformat `{ id, nama, jenis, urgensi, x, y, sumber }`. Untuk Leaflet asli, install `leaflet` (`npm install leaflet`), ganti `x`/`y` persentase dengan `lat`/`lng`, dan render `<l-map>`/marker sesuai dokumentasi Leaflet.
+2. **Peta**: sudah menggunakan **Leaflet.js + OpenStreetMap** (`src/components/LeafletMap.vue`), fokus wilayah DIY dengan marker custom per jenis bencana (ikon tetes air = Banjir, ikon gunung longsor = Longsor). Titik bencana di `dummyData.js` sudah pakai koordinat `lat`/`lng` asli. Tinggal ganti isi `titikBencana` dengan data dari API sungguhan — struktur `{ id, nama, jenis, urgensi, lat, lng, sumber }` sudah siap pakai.
 3. **Rute Dijkstra asli**: `src/views/ManajemenRuteView.vue` saat ini menampilkan hasil dari `rekomendasiRute` (dummy). Sambungkan tombol "Cari Rute Optimal" ke endpoint backend yang menjalankan algoritma Dijkstra + pembobotan multikriteria (lihat Bab 2.5–2.6 KTI).
 
 ## Palet & tipografi (mengikuti PRD Bab 5)

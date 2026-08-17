@@ -54,7 +54,7 @@ const layers = ref([
             <span v-for="l in layers.filter((x) => x.active)" :key="l.key" class="badge-sumber">{{ l.label }}</span>
           </div>
         </div>
-        <MapMock :points="titikBencana" height="460px" />
+        <LeafletMap :points="titikBencana" height="460px" />
       </div>
     </div>
 

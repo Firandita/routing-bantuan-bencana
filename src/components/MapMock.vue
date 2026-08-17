@@ -8,6 +8,10 @@ const jenisColor = {
   Longsor: '#EA580C',
   Banjir: '#0284C7',
 }
+const jenisIcon = {
+  Longsor: 'landslide',
+  Banjir: 'waterDrop',
+}
 </script>
 
 <template>
@@ -39,7 +43,7 @@ const jenisColor = {
           class="w-7 h-7 rounded-full flex items-center justify-center text-white shadow-md ring-2 ring-white transition-transform group-hover:scale-110"
           :style="{ background: jenisColor[p.jenis] || '#64748B' }"
         >
-          <Icon name="mapPin" class="w-3.5 h-3.5" />
+          <Icon :name="jenisIcon[p.jenis] || 'mapPin'" class="w-3.5 h-3.5" />
         </div>
         <div class="w-1.5 h-1.5 rounded-full bg-navy-900/30 -mt-0.5" />
 

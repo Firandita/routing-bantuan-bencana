@@ -23,6 +23,7 @@ const counts = computed(() =>
 )
 
 const selected = ref(null)
+const bantuanModal = ref(null)
 </script>
 
 <template>
@@ -84,7 +85,14 @@ const selected = ref(null)
               </td>
               <td class="px-4 py-3 font-medium text-navy-900">{{ l.nama }}</td>
               <td class="px-4 py-3 text-slate-600">{{ l.penerima }}</td>
-              <td class="px-4 py-3 text-slate-500 max-w-[180px] truncate" :title="l.daftarBantuan">{{ l.daftarBantuan }}</td>
+              <td class="px-4 py-3">
+                <button
+                  @click="bantuanModal = l"
+                  class="text-xs font-semibold text-brand-700 hover:text-brand-800 bg-brand-50 hover:bg-brand-100 px-2.5 py-1.5 rounded-lg transition-colors whitespace-nowrap"
+                >
+                  Lihat Daftar ({{ l.rincianBantuan.length }})
+                </button>
+              </td>
               <td class="px-4 py-3 text-slate-600">{{ l.jarak }}</td>
               <td class="px-4 py-3 text-slate-600">{{ l.durasi }}</td>
               <td class="px-4 py-3 text-slate-500 max-w-[200px] truncate" :title="l.alamat">{{ l.alamat }}</td>
@@ -122,7 +130,15 @@ const selected = ref(null)
           </div>
           <div><p class="section-label">Penerima</p><p class="text-slate-700">{{ selected.penerima }}</p></div>
           <div><p class="section-label">Alamat</p><p class="text-slate-700">{{ selected.alamat }}</p></div>
-          <div><p class="section-label">Daftar Bantuan</p><p class="text-slate-700">{{ selected.daftarBantuan }}</p></div>
+          <div>
+            <p class="section-label mb-1.5">Daftar Bantuan</p>
+            <div class="space-y-1.5">
+              <div v-for="(r, i) in selected.rincianBantuan" :key="i" class="flex items-center justify-between text-sm bg-slate-50 rounded-lg px-3 py-2">
+                <span class="text-slate-700">{{ r.item }}</span>
+                <span class="font-medium text-navy-900">{{ r.jumlah }} {{ r.satuan }}</span>
+              </div>
+            </div>
+          </div>
           <div class="grid grid-cols-2 gap-4">
             <div><p class="section-label">Jarak</p><p class="text-slate-700">{{ selected.jarak }} km</p></div>
             <div><p class="section-label">Estimasi Durasi</p><p class="text-slate-700">{{ selected.durasi }}</p></div>
@@ -134,5 +150,7 @@ const selected = ref(null)
         </div>
       </div>
     </div>
+
+    <BantuanDetailModal :laporan="bantuanModal" @close="bantuanModal = null" />
   </div>
 </template>
