@@ -13,7 +13,9 @@ html, body, #app {
 }
 
 body {
-  @apply font-body text-slate-700 bg-slate-50 antialiased;
+  @apply font-body text-slate-700 antialiased;
+  background: radial-gradient(circle at 12% 0%, #EAF1FC 0%, #F4F7FD 42%, #FFFFFF 78%);
+  background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -38,7 +40,7 @@ h1, h2, h3, h4 {
 
 @layer components {
   .card {
-    @apply bg-white rounded-2xl shadow-card border border-slate-100 transition-shadow duration-200;
+    @apply bg-white/70 backdrop-blur-xl rounded-2xl shadow-card border border-white/80 transition-shadow duration-200;
   }
   .card:hover {
     @apply shadow-card-hover;

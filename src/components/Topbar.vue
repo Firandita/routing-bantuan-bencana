@@ -31,7 +31,7 @@ const jam = computed(() => now.value.toLocaleTimeString('id-ID', { hour: '2-digi
     <!-- subtle texture -->
     <div class="absolute inset-0 opacity-[0.06] bg-[radial-gradient(circle_at_20%_20%,white,transparent_35%)]" />
 
-    <div class="relative px-4 sm:px-6 lg:px-8 pt-5 pb-6">
+    <div class="relative px-4 sm:px-6 lg:px-8 pt-6 pb-10">
       <div class="flex items-start justify-between gap-4">
         <div class="flex items-center gap-3 min-w-0">
           <button
@@ -52,8 +52,8 @@ const jam = computed(() => now.value.toLocaleTimeString('id-ID', { hour: '2-digi
         <div class="flex items-center gap-2 sm:gap-3 shrink-0">
           <div class="hidden md:flex items-center gap-2 bg-white/15 backdrop-blur rounded-xl px-3 py-2 text-white/90 text-xs">
             <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
             </span>
             Sinkron data aktif
           </div>

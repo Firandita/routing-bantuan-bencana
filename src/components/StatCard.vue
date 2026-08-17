@@ -8,7 +8,7 @@ defineProps({
 })
 
 const toneMap = {
-  aman: { bg: 'bg-emerald-50', text: 'text-emerald-600', ring: 'ring-emerald-100' },
+  aman: { bg: 'bg-green-50', text: 'text-green-600', ring: 'ring-green-100' },
   proses: { bg: 'bg-amber-50', text: 'text-amber-600', ring: 'ring-amber-100' },
   darurat: { bg: 'bg-red-50', text: 'text-red-600', ring: 'ring-red-100' },
   info: { bg: 'bg-brand-50', text: 'text-brand-700', ring: 'ring-brand-100' },

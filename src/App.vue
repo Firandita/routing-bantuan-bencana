@@ -7,7 +7,7 @@ const sidebarOpen = ref(false)
 </script>
 
 <template>
-  <div class="flex min-h-screen bg-slate-50">
+  <div class="flex min-h-screen">
     <Sidebar :open="sidebarOpen" @close="sidebarOpen = false" />
 
     <div class="flex-1 min-w-0 flex flex-col">

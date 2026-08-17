@@ -59,7 +59,7 @@ function pct(a, b) {
           <tr v-for="w in rekapWilayah" :key="w.wilayah" class="border-b border-slate-50 last:border-0 hover:bg-slate-50/60">
             <td class="px-4 py-3 font-medium text-navy-900">{{ w.wilayah }}</td>
             <td class="px-4 py-3 text-slate-600">{{ w.totalLaporan }}</td>
-            <td class="px-4 py-3 text-emerald-600 font-medium">{{ w.tersalurkan }}</td>
+            <td class="px-4 py-3 text-green-600 font-medium">{{ w.tersalurkan }}</td>
             <td class="px-4 py-3 text-amber-600 font-medium">{{ w.belum }}</td>
             <td class="px-4 py-3 text-slate-600">{{ pct(w.tersalurkan, w.totalLaporan) }}%</td>
           </tr>
