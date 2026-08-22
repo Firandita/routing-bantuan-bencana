@@ -26,6 +26,7 @@ const sidebarOpen = ref(false)
         SIGAP Rute DIY, sistem integrator di atas platform kebencanaan resmi.
       </footer>
     </div>
+    <ToastContainer />
   </div>
 </template>
 

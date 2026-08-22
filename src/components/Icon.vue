@@ -38,6 +38,8 @@ const paths = {
   layers: 'm12 2 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5',
   waterDrop: 'M12 3c3.5 4 7 8.2 7 12a7 7 0 1 1-14 0c0-3.8 3.5-8 7-12Z',
   landslide: 'M2 20 9 6l3.5 6.5L15 8l7 12H2Zm5-3 2.2-3.8M14.5 17l1.3-2.2',
+  compass: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm3.5-12.5-2 5.5-5.5 2 2-5.5 5.5-2Z',
+  book: 'M4 19.5V5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0 0 4h13M8 7h8m-8 4h6',
 }
 
 const path = paths[props.name] || paths.home

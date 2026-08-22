@@ -1,9 +1,11 @@
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useRole, roleLabel } from '../composables/useRole'
 
 defineEmits(['toggle-sidebar'])
 const route = useRoute()
+const { currentRole } = useRole()
 
 const now = ref(new Date())
 let timer
@@ -18,6 +20,12 @@ const greeting = computed(() => {
   if (h < 15) return 'Selamat Siang'
   if (h < 18) return 'Selamat Sore'
   return 'Selamat Malam'
+})
+
+const displayName = computed(() => {
+  if (currentRole.value === 'admin') return 'Admin'
+  if (currentRole.value === 'relawan') return 'Relawan'
+  return 'Warga'
 })
 
 const tanggal = computed(() =>
@@ -38,9 +46,9 @@ const jam = computed(() => now.value.toLocaleTimeString('id-ID', { hour: '2-digi
             <Icon name="menu" class="w-5 h-5" />
           </button>
           <div class="min-w-0">
-            <p class="text-white/70 text-xs font-medium tracking-wide uppercase">{{ route.meta?.title || 'Dashboard' }}</p>
+            <p class="text-white/70 text-xs font-medium tracking-wide uppercase">{{ roleLabel[currentRole] }} · {{ route.meta?.title || 'Dashboard' }}</p>
             <h1 class="font-display font-bold text-white text-xl sm:text-2xl truncate">
-              {{ greeting }}, Admin
+              {{ greeting }}, {{ displayName }}
             </h1>
             <p class="text-white/70 text-xs sm:text-sm mt-0.5">{{ tanggal }} · {{ jam }} WIB</p>
           </div>
@@ -58,7 +66,7 @@ const jam = computed(() => now.value.toLocaleTimeString('id-ID', { hour: '2-digi
             <Icon name="bell" class="w-[18px] h-[18px]" />
           </button>
           <div class="w-9 h-9 rounded-full bg-white/90 flex items-center justify-center text-brand-800 font-display font-bold text-sm">
-            A
+            {{ displayName[0] }}
           </div>
         </div>
       </div>

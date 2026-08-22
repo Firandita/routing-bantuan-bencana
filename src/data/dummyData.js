@@ -197,9 +197,9 @@ export const zonaTerdampak = [
 ]
 
 export const gudangLogistik = [
-  { nama: 'Gudang Utama BPBD DIY', lokasi: 'Kota Yogyakarta', stok: { sembako: 420, terpal: 180, obat: 260, airBersih: '3.200 L' }, sumber: 'INA-LOGPAL (simulasi)' },
-  { nama: 'Gudang Cabang Kulon Progo', lokasi: 'Wates, Kulon Progo', stok: { sembako: 150, terpal: 90, obat: 110, airBersih: '900 L' }, sumber: 'INA-LOGPAL (simulasi)' },
-  { nama: 'Gudang Cabang Gunungkidul', lokasi: 'Wonosari, Gunungkidul', stok: { sembako: 95, terpal: 60, obat: 70, airBersih: '600 L' }, sumber: 'INA-LOGPAL (simulasi)' },
+  { nama: 'Gudang Utama BPBD DIY', lokasi: 'Kota Yogyakarta', lat: -7.7956, lng: 110.3695, stok: { sembako: 420, terpal: 180, obat: 260, airBersih: '3.200 L' }, sumber: 'INA-LOGPAL (simulasi)' },
+  { nama: 'Gudang Cabang Kulon Progo', lokasi: 'Wates, Kulon Progo', lat: -7.8615, lng: 110.1583, stok: { sembako: 150, terpal: 90, obat: 110, airBersih: '900 L' }, sumber: 'INA-LOGPAL (simulasi)' },
+  { nama: 'Gudang Cabang Gunungkidul', lokasi: 'Wonosari, Gunungkidul', lat: -7.9660, lng: 110.6069, stok: { sembako: 95, terpal: 60, obat: 70, airBersih: '600 L' }, sumber: 'INA-LOGPAL (simulasi)' },
 ]
 
 export const relawan = [
@@ -223,4 +223,17 @@ export const logSinkronisasi = [
   { waktu: '16 Agu 2026, 08:00', sumber: 'BPBD DIY', aksi: 'Sinkronisasi laporan warga', status: 'Berhasil' },
   { waktu: '15 Agu 2026, 22:40', sumber: 'DIBI-BNPB', aksi: 'Tarik data historis kejadian', status: 'Berhasil' },
   { waktu: '15 Agu 2026, 20:15', sumber: 'INA-LOGPAL', aksi: 'Percobaan koneksi API resmi', status: 'Gagal — mode simulasi' },
+]
+
+// ===== Data khusus role Relawan =====
+export const tugasRelawan = [
+  { id: 'TG-041', lokasi: 'Samigaluh, Kulon Progo', jiwa: 12, kebutuhan: 'Butuh evakuasi', jarak: 1.8, urgensi: 'Tinggi', lat: -7.6425, lng: 110.1567 },
+  { id: 'TG-040', lokasi: 'Girimulyo, Kulon Progo', jiwa: 8, kebutuhan: 'Butuh logistik', jarak: 4.2, urgensi: 'Sedang', lat: -7.7386, lng: 110.1719 },
+  { id: 'TG-039', lokasi: 'Pringgokusuman, Kota Yogyakarta', jiwa: 5, kebutuhan: 'Lapor kondisi', jarak: 2.5, urgensi: 'Rendah', lat: -7.7833, lng: 110.3639 },
+]
+
+export const riwayatTugasRelawan = [
+  { tanggal: '14 Agu 2026', lokasi: 'Dusun Sembego', jenis: 'Logistik pangan', status: 'Selesai' },
+  { tanggal: '10 Agu 2026', lokasi: 'RW 05 Gedongkiwo', jenis: 'Evakuasi', status: 'Selesai' },
+  { tanggal: '3 Agu 2026', lokasi: 'Kalasan Timur', jenis: 'Logistik air bersih', status: 'Selesai' },
 ]
